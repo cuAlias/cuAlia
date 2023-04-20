@@ -9,4 +9,5 @@ Graph Sampling methods using cuAlias.
 1. download matrix from suitesparse
 2. check the algorithm what you want to run. 
 3. `make`
-4. 
+4. change your `PATH` in $run.sh$
+5. sh run.sh
