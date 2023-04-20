@@ -1,5 +1,5 @@
 input="2757matrix.csv"
-
+PATH="YOURPATH"
 {
   # readc
   i=1
@@ -8,15 +8,9 @@ input="2757matrix.csv"
   while IFS=',' read -r mid Group Name rows cols nonzeros
   do
     echo "$mid $Group $Name $rows $cols $nonzeros"
+    
+    CUDA_VISIBLE_DEVICES=0 ./test ${PATH}/$Group/$Name/$Name.mtx 40000
 
-    #./test 2 160 /home/fx/Desktop/MM/$Group/$Name/$Name.mtx
-    #./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx `expr $nonzeros / 20`# 5%
-    # ./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx `expr $nonzeros / 10`# 10%
-    # ./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx `expr \( $nonzeros \* 15 \) / 100`# 15%
-    CUDA_VISIBLE_DEVICES=0 ./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx 40000
-    # CUDA_VISIBLE_DEVICES=1 ./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx 40000
-     #./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx `expr $nonzeros / 5`# 20%
-    # ./test /media/hemeng/2TB/MM/$Group/$Name/$Name.mtx `expr $nonzeros / 4`# 25%
     i=`expr $i + 1`
   done
 } < "$input"
