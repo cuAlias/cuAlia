@@ -7,6 +7,6 @@ Graph Sampling methods using cuAlias.
 
 #### Execution of cuAlias
 1. download matrix from suitesparse
-2. `make`
+2. `make deepwalk` or `make deepwalk-single` or `make sage` or `make sage-single` or `make node2vec`
 3. in $run.sh$, change your `PATH` to store the matrix.
 4. `sh run.sh`
