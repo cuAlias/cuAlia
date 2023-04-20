@@ -10,3 +10,4 @@ Graph Sampling methods using cuAlias.
 2. `make deepwalk` or `make deepwalk-single` or `make sage` or `make sage-single` or `make node2vec`
 3. in $run.sh$, change your `PATH` to store the matrix, change your `./deepwalk` or `./sage`
 4. `sh run.sh`
+5. run `Draw*.py` to Draw pic based on data which form is *.csv 
