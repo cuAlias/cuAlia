@@ -595,8 +595,8 @@ int main(int argc, char **argv)
 FILE *fout = fopen("node2vec-313.csv", "a");
     if (fout == NULL)
         printf("Writing results fails.\n");
-    fprintf(fout, "%s,%i,%i,%i,%f\n",
-            filename,  matrixA_d->m, matrixA_d->n, matrixA_d->nnz,ave_time_alias_table_sample);
+    fprintf(fout, "%s,%i,%i,%i,%f,%f\n",
+            filename,  matrixA_d->m, matrixA_d->n, matrixA_d->nnz,time_alias_table_create,ave_time_alias_table_sample);
     fclose(fout);
 //-------------------------------l2 end--------------------------------
 
@@ -653,7 +653,7 @@ FILE *fout = fopen("node2vec-313.csv", "a");
     
  matrixA_d->nnz, matrixA_d->time_cuda_step);
     fclose(fout);
-    */
+    
 step);
     fclose(fout);
     
