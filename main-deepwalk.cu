@@ -636,5 +636,3 @@ FILE *fout = fopen("deepwalk-219.csv", "a");
             filename,  matrixA_d->m, matrixA_d->n, matrixA_d->nnz, matrixA_d->time_cuda_step);
     fclose(fout);
     */
-;
-    */
